@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+</head>
+<body>
+    <form>
+        <h1>Application Form</h1>
+
+        <!-- First and Last Name -->
+        <b>First Name:</b> <input type="text" name="first_name" id="first_name">
+        <b>Last Name:</b> <input type="text" name="last_name" id="last_name">
+        <br><br>
+
+        <!-- DOB & Age -->
+        <b>Date of Birth:</b> <input type="date" name="dob" id="dob">
+        <b>Age:</b> <input type="number" name="age" id="age">
+        <br><br>
+
+        <!-- Gender -->
+        <b>Gender:</b>
+        <select id="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        
+        <!-- Email Address -->
+        <b>Email Address:</b> <input type="email" name="email" placeholder="Enter Email Address" id="email">
+        <br><br>
+
+        <!-- Position (Radio buttons) -->
+        
+            <legend><b>Positions Available:</b></legend>
+            <input type="radio" name="position" id="Junior" value="Junior">
+            <label for="Junior">Junior Developer</label>
+            <input type="radio" name="position" id="Mid" value="Mid-level">
+            <label for="Mid">Mid-level Developer</label>
+            <input type="radio" name="position" id="Senior" value="Senior">
+            <label for="Senior">Senior Developer</label>
+       
+        <br><br>
+
+        <!-- Skills (Checkboxes) -->
+     
+            <b>Skills Available:</b>
+            <input type="checkbox" id="Java" name="skills" value="Java">
+            <label for="Java">Java</label>
+            <input type="checkbox" id="JavaScript" name="skills" value="JavaScript">
+            <label for="JavaScript">JavaScript</label>
+            <input type="checkbox" id="Python" name="skills" value="Python">
+            <label for="Python">Python</label>
+        
+        <br><br>
+
+        <!-- Password fields -->
+        <b>Password:</b> <input type="password" name="password" id="password">
+        <b>Confirm Password:</b> <input type="password" name="confirm_password" id="confirm_password">
+        <br><br>
+
+        <!-- Submit and Reset buttons -->
+        <input type="submit" value="Submit"> 
+        <input type="reset" value="Reset">
+
+    </form> 
+</body>
+</html>
+ 
