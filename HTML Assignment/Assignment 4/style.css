@@ -1,0 +1,226 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0%;
+}
+                      /*Index Page*/
+.img1{
+    background-image:url(./img/Reg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto; 
+    height: 500px;
+    width: 450px;
+}
+.img2{
+    background-image:url(./img//login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto; 
+    height: 500px;
+    width: 450px;
+}
+h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+                       /*login Page*/
+
+h2{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.back-button {
+    position: absolute;
+    top: 20px;  
+    left: 20px; 
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.Email{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.Pass{
+    display: flex;
+    justify-content: center;
+    gap: 38px;
+}
+.Submit_Reset{
+    display: flex;
+    justify-content: center;
+
+}
+.submit-btn{
+   width: 60px;
+   font-size: 14px;
+}
+.reset-btn{
+    width: 60px;
+    font-size: 14px;
+ }
+
+                        /*Registration Page*/
+.main-container{
+    display: flex;
+}
+.container{
+    display: flex;
+    margin: auto;
+}
+input{
+    font-size: 16px;
+}
+/* First Name */
+.First-Name{
+    justify-content: left;
+    display: flex;
+    font-size: 18px;
+    gap: 145px;
+}
+
+.fnlabel{
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    gap: 10px;
+}
+/* Last Name */
+.Last-Name{
+    justify-content: left;
+    display: flex;
+    font-size: 18px;
+    gap: 150px;
+}
+
+.lnlabel{
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    gap: 10px;
+}
+/* Date of Birth*/
+.DOB{
+    justify-content: left;
+    display: flex;
+    font-size: 18px;
+    gap: 122px;
+}
+/* Date of Birth*/
+.email-id{
+    justify-content: left;
+    display: flex;
+    font-size: 18px;
+    gap: 171px;
+}
+
+/* Mobile Number*/
+.MOBILE-NUMBER{
+    justify-content: left;
+    display: flex;
+    font-size: 18px;
+    gap: 101px;
+}
+/* Gender */
+.Gender{
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    gap: 180px;
+}
+.Gen{
+    gap: 10px;
+}
+/* Address */
+.Add {
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    gap: 170px;
+}
+.Add .infoADD{
+    gap: 10px;
+}
+/* City */
+.CITY{
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    gap: 210px;
+}
+.CITY .infocity{
+    gap: 10px;
+}
+
+/* Pin */
+.PIN {
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    gap: 170px;
+}
+.PIN .infopin{
+    gap: 10px;
+}
+
+/* State */
+.STATE{
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    gap: 200px;
+}
+.STATE .infostate{
+    gap: 10px;
+}
+
+/* Country */
+.COUNTRY{
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    gap: 167px;
+}
+.COUNTRY .infocountry{
+    gap: 10px;
+}
+/* Hobbies */
+.HOBBIES{
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    gap: 175px;
+}
+/* Qualification */
+.Q{
+    display: flex;
+    justify-content: left;
+ }
+
+.T{
+    margin-left: 135px;  
+}
+
+.out{
+    display: flex;
+    justify-content: left; 
+    margin-left: 500px;
+}
+/* Applied Course */
+
+.Select{
+    margin-left: 140px;
+}
+/* Image */
+
+.Img{
+    margin-left: 143px;
+}
+
+.sr{
+    display: flex;
+    justify-content: center;
+}
+

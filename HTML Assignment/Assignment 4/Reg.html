@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+</head>
+<body>
+<!-- Backbutton -->
+<div class="back-button">
+    <a href="index.html">
+        <img src="/img/Back button.jpg" alt="back arrow">
+    </a>
+</div>
+<br>
+<br>
+<br>
+<!-- Logo -->
+
+<div class="logo">
+    <img height="200" src="./img/Logo.jpg" alt="Logo">
+</div>
+<br>
+
+<h2>STUDENT REGISTRATION FORM</h2>
+<br>
+<br>
+<br>
+                            <!-- Registration Form -->
+<div class="main-container">
+    <div class="container">
+        <!-- Form -->
+         <form>
+            <!-- First Name -->
+            <div class="First-Name">
+            <label class="fnlabel">FIRST NAME</label>
+            <span classx`="fnInput">
+                <input type="text" name="first-name" placeholder="Enter your first name" required maxlength="30">
+                (max 30 characters a-z and A-Z)
+            </span>
+            </div>
+            <br>
+             <!-- Last Name -->
+             <div class="Last-Name">
+                <label class="lnlabel">LAST NAME</label>
+                <span classx`="lnInput">
+                    <input type="text" name="last-name" placeholder="Enter your last name" required maxlength="30">
+                    (max 30 characters a-z and A-Z)
+                </span>
+                </div>
+                <br>
+                  <!-- DOB -->
+             <div class="DOB">
+                <label class="doblabel">DATE OF BIRTH</label>
+                <span classx`="lnInput">
+                    <input type="date" name="dob">
+
+                </span>
+                </div>
+                <br>
+                             <!-- Email ID -->
+             <div class="email-id">
+                <label class="edlabel">EMAIL ID</label>
+                <span classx`="emailInput">
+                    <input type="email" name="email" placeholder="Enter the Email Address">
+                </span>
+                </div>
+                <br>
+                         <!-- MOBILE NUMBER -->
+             <div class="MOBILE-NUMBER">
+                <label class="mnlabel">MOBILE NUMBER</label>
+                <span classx`="mobilelInput">
+                    <input type="text" name="email" placeholder="Enter the Mobile Number">
+                </span>
+                </div>
+                <br>
+                              <!-- Gender -->
+             <div class="Gender">
+                <label class="mnlabel">GENDER</label>
+                <div class="Gen">
+                <label class="label-6A" for="Male">Male</label>
+                <span class="infoM">
+                    <input type="radio" name="GENDER" id="Male" value="Male">
+                </span>
+    
+                <label class="label-6B" for="Female">Female</label>
+                <span class="infoF">
+                    <input type="radio" name="GENDER" id="Female" value="Female">
+                </div>
+                </span>
+                </div>
+                <br>
+              <!-- Address -->
+              <div class="Add">
+                <label class="label-7" for="ADDRESS">ADDRESS</label>
+                <span class="infoADD">
+                    <textarea name="Address" id="ADDRESS" cols="40" rows="5"></textarea>
+                </span>
+            </div>
+            <br>
+            <!-- City -->
+            <div class="CITY">
+                <label class="label-8" for="CITY">CITY</label>
+                <span class="infocity">
+                    <input type="text" name="CITY" id="CITY" placeholder="Enter the City Name"> (max 30 characters a-z and A-Z)
+                </span>
+            </div>
+            <br>
+        <!-- Pin -->
+            <div class="PIN">
+                <label class="label-9" for="PIN CODE">PIN CODE</label>
+                <span class="infopin">
+                    <input type="number" name="PIN CODE" id="PIN CODE" placeholder="Enter the Pin Code"> (6 Digits Numbers)
+                </span>
+                <br>
+            </div>
+            <br>
+        <!-- State -->
+            <div class="STATE">
+                <label class="label-10" for="STATE">STATE</label>
+                <span class="infostate">
+                    <input type="text" name="STATE" id="STATE" placeholder="Enter the State "> (max 30 characters a-z and A-Z)
+                </span>
+            </div>
+            <br>
+        <!-- Country -->
+            <div class="COUNTRY">
+                <label class="label-11" for="COUNTRY">COUNTRY</label>
+                <span class="infocountry">
+                    <input type="text" name="COUNTRY" id="COUNTRY" placeholder="Enter the Country Name ">
+                </span>
+            </div>
+            <br>
+
+        <!-- Hobbies -->
+        <div class="HOBBIES">
+            <label class="label-12" for="HOBBIES">HOBBIES</label>
+           
+             <div class="HB1">
+                 <!-- HB1 -->
+            <label class="HB" for="Drawing">Drawing</label>
+        <span class="infoh1">
+            <input type="checkbox" name="HOBBIES" id="Drawing" value="Drawing">
+        </span>
+         <!-- HB2 -->
+         <label class="HB" for=" Singing "> Singing </label>
+        <span class="infoh1">
+            <input type="checkbox" name=" Singing " id=" Singing " value=" Singing ">
+        </span>
+         <!-- HB3 -->
+         <label class="HB" for="Dancing">Dancing</label>
+        <span class="infoh1">
+            <input type="checkbox" name="Dancing" id="Dancing" value="Dancing">
+        </span>
+         <!-- HB4 -->
+         <label class="HB" for="Sketching">Sketching</label>
+        <span class="infoh1">
+            <input type="checkbox" name="Sketching" id="Sketching" value="Sketching">
+        </span>
+        <br>
+         <!-- HB5 -->
+         <label class="HB" for="Others">Others</label>
+        <span class="infoh1">
+            <input type="checkbox" name="Others" id="Others" value="Others">
+            <input type="text" name="other" id="other">
+        </span>
+    </div>
+<!-- Qualification -->
+        </div>
+        <div class="Q">
+            <label class="label-13" for="QUALFICATION">QUALFICATION</label>
+    
+            <div class="T">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SI.NO.</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of passing </th>
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Class X</td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Class XII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Graduation</td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Masters</td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+        </div>
+<!-- Course Applied -->
+<div class="out">
+    (10 char max) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; upto 2 decimal
+</div>
+<br>
+
+<label class="C" for="COURSES">COURSES <br>APPLIED FOR</label>
+
+
+<label class="Select">
+<select name="Course" id="Course" required>
+<option value="">Select any course</option>
+<option value="">BCA</option>
+<option value="">B.A</option>
+<option value="">B.Sc</option>
+<option value="">B.Com</option>
+</select>
+</label>
+<br>
+
+
+<br>
+<br>
+<!-- Image -->
+<label class="U" for="Upload your pic">Upload your pic</label>
+
+<label class="Img"> 
+    <input type="file" name="image" id="imae">
+</label>
+<br>
+
+
+<label class="I" for="(only .png,.jpg,.jpeg formats allow)	">(only .png,.jpg,.jpeg formats allow)	</label>
+<br>
+<br>
+<!-- Button -->
+<div class="sr">
+<input type="submit" name="submit" id="submit"> &nbsp;
+<input type="reset" name="reset" id="reset">
+</div>
+<br>
+<br>    
+         </form>
+    </div>
+</div>
+</body>
+</html>
