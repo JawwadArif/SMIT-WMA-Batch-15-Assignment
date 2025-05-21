@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+#shape {
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+    border-radius: 12px;
+    /* Make it rounder; use 50% for a circle */
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    cursor: grab;
+}
