@@ -1,0 +1,40 @@
+div button{
+    margin-left: 20px;
+    
+}
+div{
+    text-align: center;
+}
+
+.black{
+    background-color: rgb(0, 0, 0);
+    padding: 10px 40px 10px 40px;
+}
+.red{
+    background-color: red;
+    padding: 10px 40px 10px 40px;
+}
+.white{
+    background-color: white;
+    padding: 10px 40px 10px 40px;
+}
+.blue{
+    background-color: blue;
+    padding: 10px 40px 10px 40px;
+}
+.orange{
+    background-color: orange;
+    padding: 10px 40px 10px 40px;
+}
+.yellow{
+    background-color: yellow;
+    padding: 10px 40px 10px 40px;
+}
+.lightblue{
+    background-color: lightblue;
+    padding: 10px 40px 10px 40px;
+}
+.green{
+    background-color: green;
+    padding: 10px 40px 10px 40px;
+}
