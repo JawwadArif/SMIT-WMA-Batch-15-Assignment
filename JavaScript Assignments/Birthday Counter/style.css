@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #a67b;
+    padding: 20px;
+}
+
+.birthdayBox {
+    padding: 50px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+    max-width: 90%;
+    width: 600px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 12px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: cursive;
+    color: #a67b;
+}
+
+hr {
+    margin: 10px 0px;
+    border: none;
+    border-top: 2px solid #a67b;
+}
+
+.timer {
+    font-size: 30px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+input{
+    width: 80%;
+    font-size: 20px;
+    text-align: center;
+}
+
+#submit{
+    background-color: #a67b;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .birthdayBox {
+        padding: 30px 20px;
+        /* height: 20vh; */
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .timer {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+}
