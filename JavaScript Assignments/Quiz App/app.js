@@ -44,135 +44,65 @@ const questions = [
             { text: "JSON.toText()", correct: false }
         ]
     },
-    {
-        question: "Which operator is used to assign a value to a variable?",
-        answers: [
-            { text: "==", correct: false },
-            { text: "=", correct: true },
-            { text: "===", correct: false },
-            { text: "=>", correct: false }
-        ]
-    },
-    {
-        question: "Which of these is a correct way to define a function in JavaScript?",
-        answers: [
-            { text: "function myFunc()", correct: true },
-            { text: "def myFunc()", correct: false },
-            { text: "func myFunc()", correct: false },
-            { text: "void myFunc()", correct: false }
-        ]
-    },
-    {
-        question: "What will `Array.isArray([])` return?",
-        answers: [
-            { text: "false", correct: false },
-            { text: "undefined", correct: false },
-            { text: "true", correct: true },
-            { text: "null", correct: false }
-        ]
-    },
-    {
-        question: "What is a correct syntax for an arrow function?",
-        answers: [
-            { text: "function => {}", correct: false },
-            { text: "() => {}", correct: true },
-            { text: "() -> {}", correct: false },
-            { text: "{} <= ()", correct: false }
-        ]
-    },
-    {
-        question: "What is the result of `2 + '2'` in JavaScript?",
-        answers: [
-            { text: "4", correct: false },
-            { text: "'22'", correct: true },
-            { text: "NaN", correct: false },
-            { text: "undefined", correct: false }
-        ]
-    }
+
 ];
-const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("Answer");
-const nextButton = document.getElementById("next-btn");
 
+const qEl = document.getElementById("question");
+const aEl = document.getElementById("Answer");
+const nextBtn = document.getElementById("next-btn");
 
-let CurrentQuestionIndex = 0;
-let score = 0;
-function StartQuiz() {
-    CurrentQuestionIndex = 0;
-    score = 0;
-    nextButton.innerHTML = "Next"
+let currentIndex = 0, score = 0;
+
+function startQuiz() {
+    currentIndex = 0; score = 0;
+    nextBtn.textContent = "Next";
     showQuestion();
 }
 
 function showQuestion() {
-    resetState();
-    let CurrentQuestion = questions[CurrentQuestionIndex];
-    let questionNo = CurrentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + CurrentQuestion.question;
+    qEl.textContent = `${currentIndex + 1}. ${questions[currentIndex].question}`;
+    aEl.innerHTML = "";
+    nextBtn.style.display = "none";
 
-    CurrentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.classList.add("btn")
-        answerButton.appendChild(button);
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
-        }
-        button.addEventListener("click", SelectAnswer)
+    questions[currentIndex].answers.forEach(({ text, correct }) => {
+        const btn = document.createElement("button");
+        btn.textContent = text;
+        btn.classList.add("btn");
+        btn.dataset.correct = correct;
+        btn.onclick = selectAnswer;
+        aEl.appendChild(btn);
     });
 }
 
-function resetState() {
-    nextButton.style.display = "none"
-    while (answerButton.firstChild) {
-        answerButton.removeChild(answerButton.firstChild)
-    }
-}
+function selectAnswer(e) {
+    const correct = e.target.dataset.correct === "true";
+    if (correct) score++;
 
-function SelectAnswer(e) {
-    const Selectbtn = e.target;
-    const isCorrect = Selectbtn.dataset.correct === "true";
-
-    if (isCorrect) {
-        Selectbtn.classList.add("correct");
-        score++;
-    } else {
-        Selectbtn.classList.add("incorrect");
-    }
-
-    Array.from(answerButton.children).forEach(button => {
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct");
-        }
-        button.disabled = true;
+    [...aEl.children].forEach(btn => {
+        btn.disabled = true;
+        if (btn.dataset.correct === "true") btn.classList.add("correct");
+        else if (btn === e.target) btn.classList.add("incorrect");
     });
 
-    nextButton.style.display = "block";
+    nextBtn.style.display = "inline-block";
 }
 
 function showScore() {
-    resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}`;
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
+    qEl.textContent = `You scored ${score} out of ${questions.length}`;
+    aEl.innerHTML = "";
+    let per = score * 100 / questions.length;
+    if (per > 60) {
+        nextBtn.textContent = `Congratulation you get ${per}%`;
+    } else {
+        nextBtn.textContent = `You Failed ${per}%`;
+    }
+    nextBtn.style.display = "inline-block";
 }
 
-function handleNextButton() {
-    CurrentQuestionIndex++;
-    if (CurrentQuestionIndex < questions.length) {
-        showQuestion()
-    } else {
-        showScore()
-    }
-}
+nextBtn.onclick = () => {
+    currentIndex++;
+    if (currentIndex < questions.length) showQuestion();
+    else showScore();
+};
 
-
-nextButton.addEventListener("click", () => {
-    if (CurrentQuestionIndex < questions.length) {
-        handleNextButton();
-    } else {
-        StartQuiz()
-    }
-})
-
-StartQuiz();
+startQuiz();
